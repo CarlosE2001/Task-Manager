@@ -1,0 +1,96 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body style="-webkit-app-region: drag">
+    <div id="main_div">
+        <div id="nav">
+            <span>
+                <input type="text" name="InputEmpresa" id="inputEmpresas" class="inputText" list="listaEmpresas"
+                    placeholder="Escriba aquí...">
+                <datalist id="listaEmpresas">
+                </datalist>
+            </span>
+
+            <span>
+
+                <label>L</label>
+                <input type="checkbox" class="check" id="L" onclick="diaSeleccionado()">
+                <label>K</label>
+                <input type="checkbox" class="check" id="K" onclick="diaSeleccionado()">
+                <label>M</label>
+                <input type="checkbox" class="check" id="M" onclick="diaSeleccionado()">
+                <label>J</label>
+                <input type="checkbox" class="check" id="J" onclick="diaSeleccionado()">
+                <label>V</label>
+                <input type="checkbox" class="check" id="V" onclick="diaSeleccionado()">
+                <label>S</label>
+                <input type="checkbox" class="check" id="S" onclick="diaSeleccionado()">
+                <label>D</label>
+                <input type="checkbox" class="check" id="D" onclick="diaSeleccionado()">
+
+            </span>
+
+            <span>
+
+                <select id="horaInicio" onchange="tiempoDisponible()" class="selectorHoras">
+                    <option>--:--</option>
+                </select>
+
+                <select id="horaFinal" onchange="revisarEspacio()" class="selectorHoras">
+                    <option>--:--</option>
+                </select>
+
+            </span>
+
+            <span>
+                <button class="agregar" onclick="agregarAlPlan()">Agregar</button>
+            </span>
+
+            <span>
+                <button class="borrar" onclick="borrarDatos()">Borrar</button>
+            </span>
+
+            <span>
+                <img src="./Delphos_logo.png" alt="Delphos_logo" class="logo_img" onclick="borrarDatos()" />
+            </span>
+
+
+
+
+
+        </div>
+
+        <div>
+            <table id="tabla"></table>
+        </div>
+
+        <hr class="divisor" />
+        <div class="consultorDiv">
+
+            <span class="consultor">
+                <h1 class="tituloConsultor">+</h1>
+            </span>
+        </div>
+
+        <script src="scripts/script.js"></script>
+
+    </div>
+
+    <div class="dimmer">
+
+    </div>
+
+    <div class="popups">
+        <input type="text">
+    </div>
+
+</body>
+
+</html>
